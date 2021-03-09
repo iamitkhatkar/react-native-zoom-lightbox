@@ -3,10 +3,12 @@ import {
   View, Text,
   Animated,
   TouchableWithoutFeedback,
-  PanResponder, Image,
-  ScrollView, Modal,
+  PanResponder,
+   Modal,
   StyleSheet, Dimensions,
 } from 'react-native';
+import Image from 'react-native-fast-image'
+import { ScrollView } from 'react-native-gesture-handler';
 import SwipeableViews from 'react-swipeable-views-native';
 import PropTypes from 'prop-types';
 import ImageCustom from '../ImageCustom';
@@ -228,7 +230,7 @@ export default class SingleImage extends PureComponent {
             }
           }}
           contentContainerStyle={{ flex: 1 }}
-          maximumZoomScale={2}
+          maximumZoomScale={3}
           alwaysBounceVertical={false}
         >
           <Image
