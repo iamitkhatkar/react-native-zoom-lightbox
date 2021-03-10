@@ -4,6 +4,7 @@
   "dependencies": {
     "prop-types": "^15.5.10",
     "react-native-fast-image": "^8.3.4",
+    "react-native-image-pan-zoom": "^2.1.12",
     "react-swipeable-views-native": "^0.13.2"
   },
   "peerDependencies": {

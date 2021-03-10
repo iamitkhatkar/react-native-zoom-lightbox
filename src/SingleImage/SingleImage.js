@@ -8,6 +8,7 @@ import {
   StyleSheet, Dimensions,
 } from 'react-native';
 import Image from 'react-native-fast-image'
+import Zoom from 'react-native-image-pan-zoom"';
 import { ScrollView } from 'react-native-gesture-handler';
 import SwipeableViews from 'react-swipeable-views-native';
 import PropTypes from 'prop-types';
@@ -223,7 +224,7 @@ export default class SingleImage extends PureComponent {
     ];
     return (
       <Animated.View style={containerStyle} k>
-        <ScrollView
+        {/* <ScrollView
           ref={ref => {
             if (ref) {
               ref.scrollResponderHandleStartShouldSetResponder = () => true;
@@ -232,13 +233,19 @@ export default class SingleImage extends PureComponent {
           contentContainerStyle={{ flex: 1 }}
           maximumZoomScale={3}
           alwaysBounceVertical={false}
-        >
+        > */}
+        <Zoom cropWidth={width}
+                       cropHeight={height}
+                       imageWidth={width}
+                       imageHeight={height}>
           <Image
             source={{ uri: url }}
+            resizeMode="contain"
             style={[{ flex: 1 }, { resizeMode: 'contain' }]}
             {...this.panResponder.panHandlers}
           />
-        </ScrollView>
+          </Zoom>
+        {/* </ScrollView> */}
       </Animated.View>
     );
   }
