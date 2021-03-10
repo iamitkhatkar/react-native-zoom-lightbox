@@ -8,7 +8,7 @@ import {
   StyleSheet, Dimensions,
 } from 'react-native';
 import Image from 'react-native-fast-image'
-import Zoom from 'react-native-image-pan-zoom"';
+import Zoom from 'react-native-image-pan-zoom';
 import { ScrollView } from 'react-native-gesture-handler';
 import SwipeableViews from 'react-swipeable-views-native';
 import PropTypes from 'prop-types';
