@@ -302,7 +302,7 @@ export default class SingleImage extends PureComponent {
     });
     return (
       <View>
-        <TouchableWithoutFeedback onPress={this.open(1)} >
+        <TouchableWithoutFeedback onLongPress={this.props.onLongPress} onPress={this.open(1)} >
           <View style={index + 1 === 1 ? getOpacity() : null}>
             <ImageCustom
               url={uri}
