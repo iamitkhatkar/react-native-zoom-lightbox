@@ -3,6 +3,7 @@ import {
   View, Text,
   Animated,
   TouchableWithoutFeedback,
+  TouchableOpacity,
   PanResponder,
    Modal,
   StyleSheet, Dimensions,
@@ -302,7 +303,7 @@ export default class SingleImage extends PureComponent {
     });
     return (
       <View>
-        <TouchableWithoutFeedback onLongPress={this.props.onLongPress} onPress={this.open(1)} >
+        <TouchableOpacity activeOpacity={0.6} onLongPress={this.props.onLongPress} onPress={this.open(1)} >
           <View style={index + 1 === 1 ? getOpacity() : null}>
             <ImageCustom
               url={uri}
@@ -311,7 +312,7 @@ export default class SingleImage extends PureComponent {
               index={index + 1}
             />
           </View>
-        </TouchableWithoutFeedback>
+        </TouchableOpacity>
         {fullscreen && this.renderFullscreen()}
       </View >
     );
